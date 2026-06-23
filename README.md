@@ -1,20 +1,33 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+Here’s a short `README.md` without any code blocks that you can paste directly:
 
-# Run and deploy your AI Studio app
+***
 
-This contains everything you need to run your app locally.
+# HR Employee Leave Management Tool
 
-View your app in AI Studio: https://ai.studio/apps/b5e04f30-98be-47d4-a187-2ab761559e4b
+HR Employee Leave Management Tool is a web-based application to manage employee profiles, leave requests, approvals, and leave balances in one place. It helps HR, managers, and employees streamline the entire leave workflow.
 
-## Run Locally
+## Features
 
-**Prerequisites:**  Node.js
+- Employee profile and department management  
+- Configurable leave types (casual, sick, earned, unpaid, etc.)  
+- Online leave application with history view  
+- Manager and HR approval workflow with comments  
+- Real-time leave balance tracking  
+- Dashboard and basic leave reports  
+- Role-based access (Admin, Manager, Employee)
 
+## Tech Stack
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Update as per your project: for example, React or Angular for frontend, Node.js / Java / PHP / Python for backend, and MySQL / PostgreSQL / MongoDB for database.
+
+## Getting Started
+
+Clone the repository, configure the database and environment variables, run migrations, then start backend and frontend servers. Access the application in your browser at your configured URL.
+
+## Contributing
+
+Fork the repository, create a feature branch, make your changes, and open a pull request.
+
+## License
+
+Specify your chosen license (for example, MIT) and include a LICENSE file.
