@@ -79,7 +79,7 @@ export default function SettingsView({
         </div>
       )}
 
-      <div id="settings-grid" className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div id="settings-grid" className="max-w-2xl mx-auto w-full">
         
         {/* Policy Allocations Form */}
         <div id="policy-allocations-card" className="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm space-y-4">
@@ -128,80 +128,7 @@ export default function SettingsView({
           </form>
         </div>
 
-        {/* Administration Sandbox Actions */}
-        <div id="admin-actions-card" className="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm space-y-4 flex flex-col justify-between">
-          <div>
-            <div className="flex items-center space-x-2 pb-3 border-b border-slate-100 mb-4">
-              <Settings className="h-5 w-5 text-slate-600" />
-              <h3 className="font-bold text-slate-800 text-sm">Developer Utilities</h3>
-            </div>
-
-            <p className="text-xs text-slate-500 font-semibold">Use these helper buttons to seed sample states and test the HR lifecycle quickly.</p>
-            
-            <div className="space-y-3 pt-4">
-              {/* Generate random requests */}
-              <button
-                id="btn-generate-leaves"
-                onClick={handleGenerate}
-                className="w-full bg-amber-50 hover:bg-amber-100 border border-amber-200 text-amber-900 font-bold text-xs py-3 px-4 rounded-xl transition-all flex items-center justify-center space-x-2 cursor-pointer"
-              >
-                <PlusCircle className="h-4 w-4 text-amber-600" />
-                <span>Generate Mock Pending Leaves</span>
-              </button>
-
-              {/* Reset database */}
-              <button
-                id="btn-reset-database"
-                onClick={handleResetInitiate}
-                className="w-full bg-rose-50 hover:bg-rose-100 border border-rose-200 text-rose-900 font-bold text-xs py-3 px-4 rounded-xl transition-all flex items-center justify-center space-x-2 cursor-pointer"
-              >
-                <RotateCcw className="h-4 w-4 text-rose-600" />
-                <span>Reset Local Storage Database</span>
-              </button>
-            </div>
-          </div>
-
-          <div className="p-3.5 bg-slate-50 rounded-2xl border border-slate-150 flex items-start space-x-2 text-[10px] text-slate-400 font-bold select-none mt-4">
-            <HelpCircle className="h-4 w-4 text-slate-400 shrink-0 mt-0.5" />
-            <span>Persistence note: This tool is fully persistent with the browser's LocalStorage database. Any updates you make are stored and preserved across browser refreshes.</span>
-          </div>
-
-        </div>
-
       </div>
-
-      {/* Custom Confirmation Modal */}
-      {showResetConfirm && (
-        <div id="reset-confirm-modal" className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 z-50 animate-fade-in">
-          <div className="bg-white rounded-3xl border border-slate-200 p-6 max-w-md w-full shadow-xl space-y-4">
-            <div className="flex items-center space-x-2 pb-3 border-b border-slate-100">
-              <ShieldAlert className="h-5 w-5 text-rose-600" />
-              <h3 className="font-bold text-slate-800 text-sm">Reset Confirmation</h3>
-            </div>
-            
-            <p className="text-xs text-slate-600 font-semibold leading-relaxed">
-              Are you sure you want to reset all data to system defaults? Any custom leaves applied or approved will be permanently cleared. This action cannot be undone.
-            </p>
-
-            <div className="flex items-center space-x-3 pt-2">
-              <button
-                id="btn-confirm-reset-yes"
-                onClick={handleResetConfirm}
-                className="flex-1 bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs py-2.5 px-4 rounded-xl transition-all shadow-md shadow-rose-100 cursor-pointer animate-none"
-              >
-                Yes, Reset All
-              </button>
-              <button
-                id="btn-confirm-reset-no"
-                onClick={handleResetCancel}
-                className="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs py-2.5 px-4 rounded-xl transition-all border border-slate-200 cursor-pointer"
-              >
-                Cancel
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
