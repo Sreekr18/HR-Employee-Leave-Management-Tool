@@ -148,10 +148,9 @@ export default function LoginView({ allEmployees, onLoginSuccess }) {
                       key={emp.id}
                       type="button"
                       onClick={() => handleQuickLogin(emp.name, emp.dob)}
-                      className="w-full text-left p-2 bg-slate-50 hover:bg-indigo-50 border border-slate-100 rounded-lg text-xs font-semibold text-slate-700 transition-all flex items-center justify-between"
+                      className="w-full text-left p-2 bg-slate-50 hover:bg-indigo-50 border border-slate-100 rounded-lg text-xs font-semibold text-slate-700 transition-all flex items-center"
                     >
                       <span className="truncate">{emp.name} (HR)</span>
-                      <span className="text-[10px] text-slate-400 font-mono select-all ml-1">{emp.dob}</span>
                     </button>
                   ))}
                 </div>
@@ -166,10 +165,9 @@ export default function LoginView({ allEmployees, onLoginSuccess }) {
                       key={emp.id}
                       type="button"
                       onClick={() => handleQuickLogin(emp.name, emp.dob)}
-                      className="w-full text-left p-2 bg-slate-50 hover:bg-emerald-50 border border-slate-100 rounded-lg text-xs font-semibold text-slate-700 transition-all flex items-center justify-between"
+                      className="w-full text-left p-2 bg-slate-50 hover:bg-emerald-50 border border-slate-100 rounded-lg text-xs font-semibold text-slate-700 transition-all flex items-center"
                     >
                       <span className="truncate">{emp.name}</span>
-                      <span className="text-[10px] text-slate-400 font-mono select-all ml-1">{emp.dob}</span>
                     </button>
                   ))}
                 </div>
